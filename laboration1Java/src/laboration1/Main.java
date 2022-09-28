@@ -8,11 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Test.test();
-        //Test.test2();
-        //Test.test3();
-        //Test.test4();
-        //Test.test5();
+
         while (true) {
             String choice = showMenu();
             switch (choice) {

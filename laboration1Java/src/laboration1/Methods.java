@@ -6,12 +6,8 @@ public class Methods {
     static Scanner sc = new Scanner(System.in);
 
     static void uppOchNer() {
-        /*System.out.println("Skriv tre ord: ");
-        String word1 = sc.nextLine();
-        String word2 = sc.nextLine();
-        String word3 = sc.nextLine();
-        System.out.println(word1 + "\n" + word2 + "\n" + word3 + "\n" + "End" + "\n" + word3 + "\n" + word2 + "\n" + word1);*/
         System.out.println("How many words do you want to write? (Max 10 words)");
+
         int listCount = sc.nextInt();
         if (listCount>10){
             System.out.println("Because you wrote more than 10, the amount is set to ten");
@@ -41,30 +37,9 @@ public class Methods {
 
     }
 
-    /*public static int findIndex(int arr[], int t) { //test för vilken position de är i arrayen
 
-        int index = Arrays.binarySearch(arr, t);
-        return (index < 0) ? -1 : index;
-    }*/
     static void minMax() {
-        /*int[] integers = new int[5];
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        System.out.println("Skriv fem heltal");
 
-
-        for (int i = 0; i < integers.length; i++) {
-
-            integers[i] = sc.nextInt();
-
-
-            min = Math.min(min, integers[i]);
-            max = Math.max(max, integers[i]);
-
-
-        }
-        System.out.println(Arrays.toString(integers));
-        System.out.println("Min value: " + min + "\nMax value: " + max + "\n");*/
         int tempInt;
         String inOrder = null;
         System.out.println("Skriv in 5 heltal: ");
@@ -95,7 +70,6 @@ public class Methods {
             }
         }
 
-        //System.out.println("\n" + Arrays.toString(integers));
         System.out.println("\nStörsta talet: " + integers[integers.length - 1]);
         System.out.println("Minsta talet: " + integers[0]);
 
@@ -168,33 +142,7 @@ public class Methods {
     }
 
     static void ordningOchReda() {
-        /*int[] integers2 = new int[6]; //första version fortfarande fel med 2nd min och 2nd max
-        int min2 = Integer.MAX_VALUE;
-        int max2 = Integer.MIN_VALUE;
-        int secondmin = Integer.MAX_VALUE;
-        int secondmax = Integer.MIN_VALUE;
 
-
-        System.out.println("Skriv fem heltal");
-        for (int i = 1; i < integers2.length; i++) {
-            integers2[i] = sc.nextInt();
-
-            if (integers2[i] > max2) {
-                max2 = integers2[i];
-             if (integers2[i] < min2) {
-                min2 = integers2[i];
-            }
-            if (integers2[i] < secondmin) {
-                secondmin = integers2[i + 1];
-            } else if (integers2[i] > secondmax) {
-                secondmax = integers2[i - 1];
-            }
-            min2 = Math.min(min2, integers2[i]);
-            max2 = Math.max(max2, integers2[i]);
-            secondmin = Math.min(min2, integers2[i]);
-            secondmax = Math.max(max2, integers2[i]);
-        }
-        System.out.println("Min value: " + min2 + "\n2Min value: " + secondmin + "\nMax value:" + max2 + "\n2Max value: " + secondmax);*/
         int tempInt;
         String inOrder = null;
         System.out.println("Skriv in 5 heltal: ");
@@ -206,14 +154,12 @@ public class Methods {
         }
 
         for (int i = 0; i < integers.length; i++) {
-            //sumOfAll = integers[i] + integers[i-1];
             for (int j = i + 1; j < integers.length; j++) {
-
                 if (integers[i] > integers[j]) {
                     tempInt = integers[i];
                     integers[i] = integers[j];
                     integers[j] = tempInt;
-                    //sumOfAll = integers[i] + integers[j];
+
                 }
             }
         }
